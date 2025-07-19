@@ -91,3 +91,20 @@ function draw() {
 
 let game = setInterval(draw, 120);
 
+//Mobile-Logic 
+
+const controlsContainer = document.querySelector(".controls-container");
+
+function handleMobileInput(event) {
+    
+    const newDirection = event.target.dataset.direction;
+    if (!newDirection) return; 
+
+    if (newDirection == "UP" && d != "DOWN") d = "UP";
+    if (newDirection == "DOWN" && d != "UP") d = "DOWN";
+    if (newDirection == "LEFT" && d != "RIGHT") d = "LEFT";
+    if (newDirection == "RIGHT" && d != "LEFT") d = "RIGHT";
+}
+
+controlsContainer.addEventListener("click", handleMobileInput);
+
