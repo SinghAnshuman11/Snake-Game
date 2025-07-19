@@ -1,6 +1,10 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
+const gameOverScreen = document.getElementById("gameOverScreen");
+const finalScore = document.getElementById("finalScore");
+const restartBtn = document.getElementById("restartBtn");
+
 const scoreElement = document.getElementById('score');
 
 const box = 20;
@@ -38,6 +42,23 @@ function collision(head, array) {
         }
     }
     return false;
+}
+
+function resetGame() {
+    
+    snake = [{ x: 10 * box, y: 10 * box }];
+    food = {
+        x: Math.floor(Math.random() * 20) * box,
+        y: Math.floor(Math.random() * 20) * box
+    };
+    score = 0;
+    d = undefined;
+
+    scoreElement.innerText = score;
+    
+    gameOverScreen.style.display = "none";
+    
+    game = setInterval(draw, 120);
 }
 
 function draw() {
@@ -82,7 +103,8 @@ function draw() {
 
     if (snakeX < 0 || snakeX >= canvas.width || snakeY < 0 || snakeY >= canvas.height || collision(newHead, snake)) {
         clearInterval(game); 
-        alert("Game Over! Your score was: " + score + ". Refresh to play again.");
+        finalScore.innerText = score;
+        gameOverScreen.style.display = "flex";  
         return; 
     }
 
@@ -107,4 +129,6 @@ function handleMobileInput(event) {
 }
 
 controlsContainer.addEventListener("click", handleMobileInput);
+
+restartBtn.addEventListener("click", resetGame);
 
