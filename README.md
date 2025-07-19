@@ -10,7 +10,6 @@ You can play the game live here:
 ## Screenshot
 
 ![Snake Game Screenshot](./screenshot.png)
-*(Note: To make this screenshot appear, take a screenshot of your game, name the file `screenshot.png`, and place it in the root of your project folder.)*
 
 ## Features
 
@@ -18,7 +17,8 @@ You can play the game live here:
 - Score tracking
 - Game-over detection for wall and self-collision
 - Increasing difficulty as the score rises
-- Responsive controls using both Arrow Keys and WASD keys
+- Responsive controls using both Arrow Keys and Movement Buttons 
+- (NEW) Added Mobile Compatibility using Movement Buutons! 
 
 ## Technologies Used
 
@@ -29,8 +29,8 @@ You can play the game live here:
 ## How to Play
 
 1.  **Start the game**: Open the live link above.
-2.  **Control the Snake**: Use the **Arrow Keys** or **WASD** keys to change the snake's direction.
-3.  **Objective**: Eat the red food squares (🍎) to grow the snake and increase your score.
+2.  **Control the Snake**: Use the **Arrow Keys** keys or the **Movement Buttons** to change the snake's direction.
+3.  **Objective**: Eat the red food squares (🍎) to grow in size and increase your score.
 4.  **Avoid Collisions**: The game ends if you run into the walls or into the snake's own tail.
 
 ## How to Run Locally
