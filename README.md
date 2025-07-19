@@ -18,7 +18,7 @@ You can play the game live here:
 - Game-over detection for wall and self-collision
 - Increasing difficulty as the score rises
 - Responsive controls using both Arrow Keys and Movement Buttons 
-- (NEW) Added Mobile Compatibility using Movement Buutons! 
+- (NEW) Added Mobile Compatibility using Movement Buttons! 
 
 ## Technologies Used
 
